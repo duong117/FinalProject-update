@@ -1,6 +1,6 @@
 <template>
     <tr v-bind:class="'present-' + client.present">
-        <router-link v-bind:to="{name:'detail',params:{client:client.name}}">
+        <router-link v-bind:to="{name:'detail',params:{client:client.id}}">
         <td>{{client.name}}</td>
         </router-link>
         <td>{{client.when.substring(0,10)}}</td>
