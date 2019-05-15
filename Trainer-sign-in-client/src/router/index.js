@@ -1,17 +1,17 @@
 import Router from 'vue-router'
 
-import NewClientForm from '@/components/NewClientForm'
-import ClientDetail from '@/components/ClientDetail'
+import Homepage from '@/components/Homepage'
+import Page2 from '@/components/Page2'
 
 export default new Router({
     routes:[
         {
             path:'/',
-            component:NewClientForm
+            component:Homepage
         },
         {path:'/detail/:client',
             name:'detail',
-            component:ClientDetail
+            component:Page2
         }
     ]
 })

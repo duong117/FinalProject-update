@@ -66,7 +66,20 @@
         color:gray;
         font-style:italic;
     }
-    .present-false{
+    .present-false {
         font-weight: bold;
+    }
+    .card-title{
+    font-size: 40px}
+
+    table {
+        border: 1px solid black;
+    }
+
+    tr:hover {background-color: #f5f5f5;}
+
+    th {
+        background-color: #68af5a;
+        color: white;
     }
 </style>

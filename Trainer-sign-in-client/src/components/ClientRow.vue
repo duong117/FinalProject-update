@@ -3,7 +3,7 @@
         <router-link v-bind:to="{name:'detail',params:{client:client.name}}">
         <td>{{client.name}}</td>
         </router-link>
-        <td>{{client.when}}</td>
+        <td>{{client.when.substring(0,10)}}</td>
         <td>{{client.malefemale}}</td>
         <td>{{client.type}}</td>
         <td><input type="checkbox" v-model="client.present" v-on:change="checked(client)"></td>
@@ -16,17 +16,17 @@
 <script>
     export default {
         name: "ClientRow",
-        props:{
-            client:Object,
-            edit:Boolean
+        props: {
+            client: Object,
+            edit: Boolean
         },
-        methods:{
-            checked(client){
-                this.$emit('client-present',client)
+        methods: {
+            checked(client) {
+                this.$emit('client-present', client)
             },
-            deleteClient(client){
-                if(confirm(`Delete ${client.name}?`))
-                    this.$emit('delete-client',client)
+            deleteClient(client) {
+                if (confirm(`Delete ${client.name}?`))
+                    this.$emit('delete-client', client)
             }
         }
     }
@@ -40,5 +40,9 @@
     .present-false{
         font-weight:bold;
     }
+
+table,td {
+    text-transform: capitalize;
+}
 
 </style>
