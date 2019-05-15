@@ -13,7 +13,7 @@ export default{
         })
     },
     updateClient(client){
-        return axios.patch(`${base_url}/${client.id}`,client).then(response =>{
+        return axios.patch(`${base_url}/${client.id}`, client).then(response =>{
             return response.data
         })
     },

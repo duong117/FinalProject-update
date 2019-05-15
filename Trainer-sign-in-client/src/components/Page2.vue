@@ -28,7 +28,12 @@
         },
         methods: {
             ClientDetailAdded(client) {
+                console.log(client)
                 this.details.push(client)
+                this.$client_api.updateClient(client).then( response => {
+                    // reload clients? 
+                    // 
+                })
             }
         }
     }

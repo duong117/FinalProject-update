@@ -4,7 +4,7 @@
         <div class="alert alert-danger" v-show="errors && errors.length>0">
             <li v-for="error in errors">{{error}}</li>
         </div>
-        <h6 style="font-size:200%;text-align:center;font-family:verdana;color:#781391;">Client {{client.name}}'s Information</h6>
+        <h6 style="font-size:200%;text-align:center;font-family:verdana;color:#781391;">Client {{client.name}}'s [{{client.id}}] Information</h6>
         <!--this will use the for loop to select only the one with correponding name-->
     <form>
         <h7 style="font-size:170%;font-weight:bold;">Add client's info </h7>
@@ -43,13 +43,14 @@
                 CurrentWeight: '',
                 CurrentBodyFat:'',
                 client:{
-                    name:''
+                    id:''
                 },
                 errors:[]
             }
         },
         mounted(){
-            this.client.name=this.$route.params.client
+            this.client.id=this.$route.params.client
+            // todo query API for this client's detail including name
         },
 
         methods:{
@@ -59,7 +60,8 @@
                     let detail = {
                         today: this.CurrentDate,
                         weight: this.CurrentWeight,
-                        fat: this.CurrentBodyFat
+                        fat: this.CurrentBodyFat,
+                        id: this.client.id 
                     }
                     this.$emit('client-detail-added', detail)
                     this.CurrentDate=''

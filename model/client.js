@@ -19,6 +19,8 @@ module.exports=(sequelize,DataTypes) => {
             allowNull:false,
             defaultValue:false
         }
+        // todo add field for weight, body fat, and migrate 
+        // also modify the database table 
     })
     Client.sync({force:false}).then(() => {
         console.log('synced table')
