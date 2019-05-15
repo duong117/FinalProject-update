@@ -41,7 +41,7 @@
                     <input id="v1" class="form-check-input" type="radio" v-bind:value="female" v-model="malefemale">
                     <label class="form-check-label" for="v1">{{female}}</label>
                 </div>
-
+<br><br>
                 <!-- TODO v-on:click event handler -->
                 <button class="btn btn-primary" v-on:click.prevent="addClient"> Add</button>
             </form>
