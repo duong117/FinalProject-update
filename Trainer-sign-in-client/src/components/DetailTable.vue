@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="card client-list m-2 p-2">
-            <h7 class="detail-table-title">History Records</h7>
+            <h6 class="detail-table-title">History Records</h6>
             </div>
 
             <div id="client-detail-table">
